@@ -25,4 +25,5 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
+          platform: linux/arm64,linux/amd64
           tags: ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest

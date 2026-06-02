@@ -1,14 +1,12 @@
 services:
   app:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: erke312/express-app:latest 
     ports:
       - "8080:8080"
-    container_name: express-app
 
   watchtower:
     image: nickfedor/watchtower
+    restart: unless-stopped
     environment:
       - WATCHTOWER_POLL_INTERVAL=60
     volumes:
