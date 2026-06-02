@@ -26,4 +26,4 @@ jobs:
         with:
           push: true
           platform: linux/arm64/v8
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/express-node-app:latest
