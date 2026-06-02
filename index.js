@@ -9,6 +9,11 @@ app.get("/goodbye", (req, res) => {
   res.send("<h1>Goodbye</h1>");
 });
 
+app.get("/greet/:name", (req, res) => {
+  const name = req.params.name;
+  res.send(`<h1>Hello, ${name}!</h1>`);
+});
+
 const PORT = 8080;
 
 app.listen(PORT, () => {
